@@ -2,12 +2,9 @@
 
 class BuclesCest
 {
-
-    /*
     public function _before(AcceptanceTester $I)
     {
     }
-
 
     public function try220WorksTest(AcceptanceTester $I)
     {
@@ -97,5 +94,4 @@ class BuclesCest
         $I->seeInCurrentUrl('/227.php');
         $I->seeInSource('<tr> <td>A1</td> <td></td> <td>A3</td> </tr> <tr> <td></td> <td>B2</td> <td></td> </tr> <tr> <td>C1</td> <td></td> <td>C3</td> </tr>');
     }
-    */
 }
