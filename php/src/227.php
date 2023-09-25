@@ -11,6 +11,7 @@ extract($_POST);
 <body>
 <?php
 $abecedario = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+echo '<table>';
 for ($i = 1; $i <= $filas; $i++) {
     echo '<tr>';
     for ($j = 1; $j <= $columnas; $j++) {
@@ -20,8 +21,9 @@ for ($i = 1; $i <= $filas; $i++) {
             echo '<td>&nbsp</td>';
         }
     }
-    echo '<tr/><br>';
+    echo '<tr/>';
 }
+echo '<table/>';
 ?>
 </body>
 </html>

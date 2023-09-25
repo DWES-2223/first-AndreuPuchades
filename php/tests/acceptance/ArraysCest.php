@@ -6,14 +6,12 @@ class ArraysCest
     {
     }
 
-
     public function try230WorksTest(AcceptanceTester $I)
     {
         $I->amOnPage('/230.php');
         $I->seeInSource('<ul> <li>');
         $I->seeInSource('</li> </ul>');
     }
-
 
     public function try233WorksTest(AcceptanceTester $I)
     {
