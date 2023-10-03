@@ -109,6 +109,4 @@ class FuncionsCest
         $I->see('Hi ha 5 vocals');
     }
     */
-
-
 }

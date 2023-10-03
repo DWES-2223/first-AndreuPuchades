@@ -1,8 +1,6 @@
 <?php
-
 class ActivitatPHP
 {
-    /*
     public function _before(AcceptanceTester $I)
     {
     }
@@ -13,7 +11,6 @@ class ActivitatPHP
         $I->seeInSource('<th>Prova</th> <th>Marca</th> <th>Atleta</th> <th>Natalici</th> <th>Club</th> <th>Data</th> <th>Lloc</th>');
         $I->seeInSource('<tr><td>1.500</td> <td>3:28.76</td> <td>Mohamed Katir El Haouzi</td> <td>1998</td> <td>Playas de Castellón</td> <td>09.07.2021</td> <td>Mónaco</td> </tr>');
     }
-
 
     public function try271WorksTest(AcceptanceTester $I)
     {
@@ -51,6 +48,4 @@ class ActivitatPHP
         $I->seeInSource('<th>Prova</th> <th>Marca</th> <th>Atleta</th> <th>Natalici</th> <th>Club</th> <th>Data</th> <th>Lloc</th>');
         $I->seeInSource('<tr><td>1.500</td> <td>3:28.76</td> <td>Mohamed Katir El Haouzi</td> <td>1998</td> <td>Playas de Castellón</td> <td>09.07.2021</td> <td>Mónaco</td> </tr>');
     }
-
-    */
 }
