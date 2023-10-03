@@ -15,9 +15,9 @@ if(!isset($records)){
 if(isset($_POST["prova"]) && isset($_POST["marca"]) && isset($_POST["atleta"]) && isset($_POST["natalici"]) &&
     isset($_POST["club"]) && isset($_POST["data"]) && isset($_POST["lloc"])){
     if(existProva($_POST["prova"], $records)){
-        $newProva = ["prova" => $_POST["prova"], "marca"  => $_POST["marca"],
-            "atleta" => $_POST["atleta"], "natalici" => $_POST["natalici"], "club" => $_POST["club"], "data" => $_POST["data"],
-            "lloc" => $_POST["lloc"]];
+        $newProva = ["prova" => $_POST["prova"], "marca"  => $_POST["marca"], "atleta" => $_POST["atleta"],
+            "natalici" => $_POST["natalici"], "club" => $_POST["club"], "data" => $_POST["data"], "lloc" => $_POST["lloc"]];
+        print_r($records);
         file_put_contents('atletes.php', '<?php return ' . var_export(replaceArray($records, $newProva), true) . ';');
     } else {
         echo '<h3>No existe la prova "'. $_POST["prova"]. '", tens que introduir una que siga valida.</h3>';
@@ -41,14 +41,14 @@ function replaceArray(array $records, array $substituir) : array{
     $newArray = [];
     foreach ($records as $nombre => $record){
         echo $nombre. '/'. $substituir["prova"];
-        if($substituir["prova"] === $nombre){
-            array_push($newArray[$nombre], ["marca"  => $records["marca"], "atleta" => $records["atleta"],
+        if($substituir["prova"] != $nombre){
+            $newArray[$nombre] = ["marca"  => $records["marca"], "atleta" => $records["atleta"],
                 "natalici" => $records["natalici"], "club" => $records["club"], "data" => $records["data"],
-                "lloc" => $records["lloc"]]);
+                "lloc" => $records["lloc"]];
         } else {
-            array_push($newArray[$nombre], ["marca"  => $substituir["marca"],
-                "atleta" => $substituir["atleta"], "natalici" => $substituir["natalici"], "club" => $substituir["club"],
-                "data" => $substituir["data"], "lloc" => $substituir["lloc"]]);
+            $newArray[$nombre] = ["marca"  => $substituir["marca"], "atleta" => $substituir["atleta"],
+                "natalici" => $substituir["natalici"], "club" => $substituir["club"], "data" => $substituir["data"],
+                "lloc" => $substituir["lloc"]];
         }
     }
 
