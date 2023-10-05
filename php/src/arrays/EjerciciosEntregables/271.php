@@ -6,18 +6,17 @@
 <body>
 
 <?php
-include ("formulari-271.html");
-include("270.php");
+include("formulari-271.html");
 if(!isset($records)){
     $records = require_once 'atletes.php';
 }
+include("270a.php");
 
 if(isset($_POST["prova"]) && isset($_POST["marca"]) && isset($_POST["atleta"]) && isset($_POST["natalici"]) &&
     isset($_POST["club"]) && isset($_POST["data"]) && isset($_POST["lloc"])){
     if(existProva($_POST["prova"], $records)){
         $newProva = ["prova" => $_POST["prova"], "marca"  => $_POST["marca"], "atleta" => $_POST["atleta"],
             "natalici" => $_POST["natalici"], "club" => $_POST["club"], "data" => $_POST["data"], "lloc" => $_POST["lloc"]];
-        print_r($records);
         file_put_contents('atletes.php', '<?php return ' . var_export(replaceArray($records, $newProva), true) . ';');
     } else {
         echo '<h3>No existe la prova "'. $_POST["prova"]. '", tens que introduir una que siga valida.</h3>';

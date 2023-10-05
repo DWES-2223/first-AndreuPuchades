@@ -43,7 +43,7 @@ class ActivitatPHP
         $I->amOnPage('/272.php');
         $I->see('Record més antic: Altura');
         $I->see('Club amb més títols: Playas de Castellón');
-        $I->see('Persona amb més records: Bruno Hortelano Roig');
+        $I->see('Persona7 amb més records: Bruno Hortelano Roig');
         $I->see('Ciutat més propicia: Mónaco');
         $I->seeInSource('<th>Prova</th> <th>Marca</th> <th>Atleta</th> <th>Natalici</th> <th>Club</th> <th>Data</th> <th>Lloc</th>');
         $I->seeInSource('<tr><td>1.500</td> <td>3:28.76</td> <td>Mohamed Katir El Haouzi</td> <td>1998</td> <td>Playas de Castellón</td> <td>09.07.2021</td> <td>Mónaco</td> </tr>');

@@ -13,6 +13,7 @@ echo '<h3>El club en més records </h3>'. $datos[0];
 echo '<h3>El atleta en més records</h3>'. $datos[1];
 echo '<h3>El lloc en més records</h3>'. $datos[2];
 echo '<h3>El atleta més jove en conseguir el record.</h3>'. jove(getArrayNatalicis($records), getArrayFechas2($records));
+
 //EL RECORD MES VELL
 function vell(array $records) : mixed{
     $fechas = getArrayFechas($records);
@@ -80,6 +81,10 @@ function datoMayor(string $dato, array $records){
 
     }
 
+    return datoMax($datos, $dato);
+}
+
+function datoMax(array $datos, string $dato){
     $datoMax = $datos[0];
     for ($i = 0; $i < count($datos); $i++) {
         if($datos[$i]["valor"] >= $datoMax["valor"]){
@@ -102,7 +107,7 @@ function existeDato(array $datos, string $club, string $dato){
     return false;
 }
 
-//
+//EL ATLETA MES JOVE EN CONSEGUIR UN RECORD
 function jove(array $natalicis, array $dates) : string{
     $atlentaJove = ["atleta" => $natalicis[0]["atleta"], "valor" => $dates[0]["fecha"] - $natalicis[0]["natalici"]];
     for ($i = 1; $i < count($natalicis); $i++) {

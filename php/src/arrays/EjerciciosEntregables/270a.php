@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <title>Exercisi 270</title>
-</head>
-<body>
-<?php
-if(!isset($records)){
-    $records = require_once 'atletes.php';
-}
-?>
 <table>
     <tr>
         <th>Prueba</th>
@@ -31,9 +20,7 @@ if(!isset($records)){
             <td><?= $record["data"] ?></td>
             <td><?= $record["lloc"] ?></td>
         </tr>
-    <?php
+        <?php
     }
     ?>
 </table>
-</body>
-</html>
