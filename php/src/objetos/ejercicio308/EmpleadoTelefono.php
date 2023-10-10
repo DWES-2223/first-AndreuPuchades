@@ -1,5 +1,4 @@
 <?php
-
 namespace ejercicio308;
 
 use ejercicio301\Persona;
